@@ -1,0 +1,60 @@
+/*.publicite{
+ text-align: center;
+    height: 200px;
+    color: white;
+  background: black;
+  padding-top: 10%;
+ 
+}
+swiper-container{
+  width: 100%;
+  height: 300px;
+}
+swiper-slide{
+  border: 1px saddlebrown;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-between;
+ padding: 10px;
+}*/
+ion-card{
+  margin-top: 50px;
+}
+.card{
+  margin-top:20px;
+}
+.swiper-container {
+  height: 40%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content:baseline;
+  align-items: center;
+}
+ion-avatar{
+  height: 100px;;
+  width: 100px;
+}
+
+ion-card {
+  width: 90%;
+}
+ion-searchbar.custom {
+  --background: #12bb64;
+  --color: #fff;
+  --placeholder-color: #fff;
+  --icon-color: #fff;
+  --clear-button-color: #fff;
+
+  --border-radius: 4px;
+}
+
+ion-searchbar.ios.custom {
+  --cancel-button-color: #11e779;
+}
+
+ion-searchbar.md.custom {
+  --cancel-button-color: #fff;
+}

@@ -1,0 +1,10 @@
+<p>Decouvrir la liste des candidats ayant reagisent a votre offre</p>
+<ion-item *ngFor="let item of listjob">
+  <ion-avatar slot="start">
+    <img src="../../assets/image/Listjob/{{item.img}}" />
+  </ion-avatar>
+  <ion-label>
+    <h2>{{ item.nom }}</h2>
+    <p>{{ item.type }}</p>
+    <p>{{ item.specialisation }}</p>
+  </ion-label>

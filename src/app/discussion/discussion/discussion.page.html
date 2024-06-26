@@ -1,0 +1,89 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="title" color="success">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tab4" mode="md">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-avatar slot="start"> 
+      <img src="../../../assets/image/Message/{{photos}}" alt="erreur">
+    </ion-avatar>
+    <ion-title size="large">{{nomUsers}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button id="popover"  fill="clear">
+        <ion-icon name="ellipsis-vertical-outline" slot="icon-only">
+      </ion-icon>
+    </ion-button>
+    </ion-buttons>
+    <ion-popover #popover trigger="popover" trigger-action="click">
+      <ng-template>
+        <ion-content class="ion-padding">
+          <ion-label color="primary" >Hello World!</ion-label>
+        </ion-content>
+      </ng-template>
+    </ion-popover>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">message</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+  <ion-list>
+    <ion-item lines="none" *ngFor="let message of messages" [class]="message.type" >
+      <div class="message-content"   >
+        <label class="ion-text-wrap" >
+          <div style="border: 1px solid black; border-radius: 10px ; padding: 5px;"  [ngClass]="{'received': message.type==='sent'}" >
+            <div *ngIf="message.type==='sent'">
+              <p>{{message.text}}</p>
+            </div>
+            <div >
+              <p>{{message.text}}</p>
+            </div>
+          </div>
+        <!-- <p  [slot]="message.type==='received'?'end':'start'">{{message.text}}</p> -->
+          <ion-note>
+            <ion-icon name="checkmark-done-outline">
+            </ion-icon>
+            <p class="timestamp">{{ message.timestamp }}</p>
+          </ion-note>
+        </label>
+       
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+     <ion-icon name="add-circle-outline" slot="start"></ion-icon>
+        <ion-icon name="images-outline" slot="start"></ion-icon>
+    <div class="chat-input-container">
+      <ion-item>
+        <ion-input type="text" placeholder="Message" class="chat-input"></ion-input>
+        <ion-buttons slot="end">
+          <ion-button>
+            <ion-icon name="attach-outline"></ion-icon>
+          </ion-button>
+          <ion-button>
+            <ion-icon name="send-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-item>
+    </div>
+        <!-- <ion-icon name="add-circle-outline" slot="start"></ion-icon>
+        <ion-icon name="images-outline" slot="start"></ion-icon>
+
+        <ion-textarea autoGrow row="1" placeholder="Saisir une text" class="ion-text-center"></ion-textarea>
+        <ion-button  fill="clear" slot="end">
+          <ion-fab size="small" color="dark">
+            <ion-fab-button>
+              <ion-icon name="send"></ion-icon>
+            </ion-fab-button>
+          </ion-fab> -->
+        <!-- </ion-button> -->
+      
+    
+  </ion-toolbar>
+</ion-footer>
+

@@ -1,0 +1,14 @@
+<h2 class="a">Opportunité d'emploie</h2>
+<p class="b">Cherchez des offres d'emploie correspondant a votre critère</p>
+<ion-list>
+ <ion-item *ngFor="let job of jobs">
+   <ion-avatar slot="start">
+     <img src="../../assets/image/SearchJob/{{job.companyLogo}}" />
+   </ion-avatar>
+   <ion-label>
+     <h2>{{ job.title }}</h2>
+     <p>{{ job.company }}</p>
+     <p>{{ job.location }}</p>
+   </ion-label>
+ </ion-item>
+</ion-list>

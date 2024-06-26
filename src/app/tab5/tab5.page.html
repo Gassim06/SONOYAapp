@@ -1,0 +1,30 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>tab5</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <ion-segment [(ngModel)]="segment"  color="success" >
+    <ion-segment-button value="recrut"  >
+      <ion-label>Offre d'emploie</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="ListeRecrut">
+      <ion-label>Reaction à vos offre</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Searchjob" >
+      <ion-label>Opportunité
+      </ion-label>
+    </ion-segment-button>
+  </ion-segment>
+ <div class="recrut" *ngIf="segment==='recrut'">
+  <app-recrut></app-recrut>
+</div>
+ <div class="ListeRecrut" *ngIf="segment==='ListeRecrut'">
+  <app-listjob></app-listjob>
+</div>
+ 
+ <div class="Searchjob" *ngIf="segment==='Searchjob'">
+  <app-searchjob></app-searchjob>
+ </div>
+</ion-content>

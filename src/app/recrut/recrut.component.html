@@ -1,0 +1,62 @@
+<div class="swiper-container" >
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide" style="background-image:url('../../assets/image/recrut/recrut1/BANNIEREecrutement-perdir-18-19-764x300.gif'); background-size: cover; " ></div>
+    <div class="swiper-slide"  style="background-image:url('../../assets/image/recrut/recrut1/OIF.jpg');  background-size: cover;"></div>
+    <div class="swiper-slide"  style="background-image:url('../../assets/image/recrut/recrut1/OIP\ \(1\).jpg');  background-size: cover;"></div>
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <!-- <div class="swiper-button-prev"></div> -->
+  <!-- <div class="swiper-button-next"></div> -->
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+  <div class="avatar" >
+     <ion-avatar>
+      <img src="../../assets/image/recrut/Violetta.JPG" width="100%" />
+     </ion-avatar>
+     <p>Bonjour Kadiatou, Voulez-vous récruter</p>
+ <ion-button id="open-modal"  expand="block" color="success" fill="outline" shape="round">
+  Oui
+  </ion-button>
+</div>
+  <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="cancel()">Cancel</ion-button>
+          </ion-buttons>
+          <ion-title>Welcome</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <h1>Dites-nous qui vous recrutez</h1>
+        <ion-item>
+          <ion-label>Poste</ion-label>
+          <ion-input type="text" placeholder="Type de poste"></ion-input>
+        </ion-item>
+         <ion-item>
+          <ion-label>Entreprise</ion-label>
+          <ion-input type="text" placeholder="le nom de votre entreprise"></ion-input>
+         </ion-item>
+         <ion-item>
+          <ion-label>Lieu de travail</ion-label><br>
+          <ion-input type="text" placeholder="le ville et le quatier"></ion-input>
+         </ion-item>
+         <ion-item>
+         <ion-label>Type de travail</ion-label><br>
+          <ion-input type="text" placeholder="le ville et le quatier"></ion-input>
+        </ion-item>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+  

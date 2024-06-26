@@ -1,0 +1,78 @@
+page-messages {
+    .message-content {
+      padding: 10px;
+      display: flex;
+    }
+    
+    
+    .sent {
+      background-color: #DCF8C6; 
+      //align-self: flex-end;
+      margin-left: 100%;
+    }
+  
+    .received {
+      background-color: #4a3d96; 
+      //align-self: start;
+      margin-right: 25px;
+    }
+  
+    .timestamp {
+      font-size: 12px;
+      color: #999;
+      margin-top: 5px;
+    }
+
+    ion-footer{
+      ion-toolbar{
+        padding: 0 30px;
+        ion-textarea{
+          border:1px solid black;
+          //var(--ion-color-medium)
+          border-radius: 20px;
+          margin: 0.5vh 0;
+        }
+      }
+
+    }
+    .colorRed{
+      color: red;
+    }
+    .colorYellow{
+      color: yellow;
+    }
+    
+    
+  }
+.title{
+  --display: flex;
+}
+.chat-input-container {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+}
+
+.chat-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+ion-item {
+  --padding-start: 0;
+  --padding-end: 0;
+  --inner-padding-end: 0;
+}
+
+ion-button {
+  --background: transparent;
+  --color: #007bff;
+}
+
+ion-icon {
+  font-size: 24px;
+}

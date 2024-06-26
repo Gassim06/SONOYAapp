@@ -1,0 +1,28 @@
+
+p{
+  text-align: center;
+}
+
+
+.a{
+  height: 10px;
+  background:beige;
+}
+ion-item {
+  --border-color: #ddd;
+  --border-width: 1px 0 0 0;
+  padding: 10px;
+  h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    color: #666;
+  }
+}
+ion-avatar img {
+  width: 100%;
+  height: auto;
+}
+

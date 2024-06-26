@@ -1,0 +1,110 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-searchbar showCancelButton="focus" class="custom"></ion-searchbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menuId="first"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-searchbar></ion-searchbar>
+      <ion-buttons slot="start">
+        <ion-menu-button menuId="first"></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header> -->
+  <!-- <div class="publicite">
+      <p>Publicité</p>
+  </div> -->
+
+  <div class="swiper-container" >
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide" *ngFor="let job of MyImage" size="fixed">
+        <ion-card size="">
+         
+          <ion-card-header >
+            <ion-avatar  >
+              <img src="../../assets/image/suggestion/{{job}}"  alt="">
+            </ion-avatar>
+            
+          </ion-card-header>
+          <ion-card-content >
+            <ion-card-title> <small>Image</small> </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+ <!-- <swiper-container>
+    <swiper-Slide *ngFor="let img of MyImage">
+      <img src="../../assets/image/suggestion/{{img}}" alt="">
+    </swiper-Slide>
+ </swiper-container> -->
+ <!-- <ion-card> -->
+  
+<!-- </ion-card> -->
+  <ion-card *ngFor="let item of ImgAccueil">
+    <ion-item line="none">
+      <ion-avatar slot="start">
+        <img src="../../assets/image/accueil/{{item.profit}}">
+      </ion-avatar>
+      <ion-label>
+        {{item.nom}}
+      </ion-label>
+      <ion-icon slot="end" name="ellipsis-horizontal-outline" (click)="setOpen(true)" ></ion-icon>
+      <ion-action-sheet [isOpen]="isActionSheetOpen" header="Actions" [icon]="actionSheetButtons" (didDismiss)="setOpen(false)"></ion-action-sheet>
+    </ion-item>
+    <div class="card">
+    <ion-card-header>
+      <ion-card-title>John Doe</ion-card-title>
+      <ion-card-subtitle>2 hrs ago</ion-card-subtitle>
+    </ion-card-header>
+    <img src="../../assets/image/accueil/{{item.publication}}">
+    <ion-item>
+      <ion-button fill="clear">
+        <ion-icon slot="start" name="thumbs-up"></ion-icon>
+        Like
+      </ion-button>
+      <ion-button fill="clear" (click)="setOpen(true)">
+        <ion-icon slot="start" name="chatbubbles"  ></ion-icon>
+        Comment
+      </ion-button>
+      <ion-action-sheet [isOpen]="isActionSheetOpen" header="Actions" [buttons]="actionSheetButtons" (didDismiss)="setOpen(false)"></ion-action-sheet>
+      <ion-button fill="clear">
+        <ion-icon slot="start" name="share"></ion-icon>
+        Share
+      </ion-button>
+    </ion-item>
+    
+
+    </div>
+  </ion-card>
+
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+  <ion-card>
+    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    
+    <ion-card-header>
+      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+  </ion-card>
+  -->
+</ion-content>
