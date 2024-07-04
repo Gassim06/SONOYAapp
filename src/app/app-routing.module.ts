@@ -8,19 +8,19 @@ const routes: Routes = [
   },
   {
     path: 'dis',
-    loadChildren: () => import('./accueil/disclamer/dis/dis.module').then( m => m.DisPageModule)
+    loadChildren: () => import('./accueil2/disclamer/dis/dis.module').then( m => m.DisPageModule)
   },
   {
     path: 'con',
-    loadChildren: () => import('./accueil/connexion/con/con.module').then( m => m.ConPageModule)
+    loadChildren: () => import('./accueil2/connexion/con/con.module').then( m => m.ConPageModule)
   },
   {
     path: 'ins',
-    loadChildren: () => import('./accueil/inscription/ins/ins.module').then( m => m.InsPageModule)
+    loadChildren: () => import('./accueil2/inscription/ins/ins.module').then( m => m.InsPageModule)
   },
   {
     path: 'ins2',
-    loadChildren: () => import('./accueil/inscription2/ins2/ins2.module').then( m => m.Ins2PageModule)
+    loadChildren: () => import('./accueil2/inscription2/ins2/ins2.module').then( m => m.Ins2PageModule)
   },
   {
     path: 'tab4',
@@ -45,6 +45,10 @@ const routes: Routes = [
   {
     path: 'searchjob',
     loadChildren: () => import('./offre/Searchjob/searchjob/searchjob.module').then( m => m.SearchjobPageModule)
+  },
+  {
+    path: 'tab6',
+    loadChildren: () => import('./tab6/tab6.module').then( m => m.Tab6PageModule)
   },
 ];
 @NgModule({
