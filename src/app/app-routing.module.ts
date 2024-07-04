@@ -11,10 +11,6 @@ const routes: Routes = [
     loadChildren: () => import('./accueil2/disclamer/dis/dis.module').then( m => m.DisPageModule)
   },
   {
-    path: 'con',
-    loadChildren: () => import('./accueil2/connexion/con/con.module').then( m => m.ConPageModule)
-  },
-  {
     path: 'ins',
     loadChildren: () => import('./accueil2/inscription/ins/ins.module').then( m => m.InsPageModule)
   },
@@ -46,10 +42,7 @@ const routes: Routes = [
     path: 'searchjob',
     loadChildren: () => import('./offre/Searchjob/searchjob/searchjob.module').then( m => m.SearchjobPageModule)
   },
-  {
-    path: 'tab6',
-    loadChildren: () => import('./tab6/tab6.module').then( m => m.Tab6PageModule)
-  },
+ 
 ];
 @NgModule({
   imports: [
