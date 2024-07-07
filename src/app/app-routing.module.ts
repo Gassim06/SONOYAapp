@@ -42,6 +42,10 @@ const routes: Routes = [
     path: 'searchjob',
     loadChildren: () => import('./offre/Searchjob/searchjob/searchjob.module').then( m => m.SearchjobPageModule)
   },
+  {
+    path: 'tab6',
+    loadChildren: () => import('./tab6/tab6.module').then( m => m.Tab6PageModule)
+  },
  
 ];
 @NgModule({
